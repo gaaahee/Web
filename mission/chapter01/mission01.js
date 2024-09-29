@@ -30,15 +30,15 @@ function renderLists() {
         // index : 할 일의 인덱스  
         const li = document.createElement('li'); // 새로운 <li> 태그를 생성
         // 추가된 task 바로 옆에 완료 버튼을 만들고 html에 추가
-        // ${index} 는 인덱스를 동적으로 반영함
-        li.innerHTML = `${task} <span onclick="moveToDone(${index})">완료</span>`;
+        // ${index} 는 인덱스를 동적으로 반영함(텍스트 아니고 변수!)
+        li.innerHTML = `${task} <button class = "complete-btn" onclick="moveToDone(${index})">완료</button>`;
         todoListElement.appendChild(li);
     });
 
     // 해낸 일 리스트
-    doneList.forEach(task => {
+    doneList.forEach((task, index) => {
         const li = document.createElement('li');
-        li.innerHTML = `${task}`; // <li> 태그에 task의 내용을 html로 삽입
+        li.innerHTML = `${task} <button class = "remove-btn" onclick="removeList(${index})">삭제</button>`; // <li> 태그에 task의 내용을 html로 삽입
         doneListElement.appendChild(li); // doneListElement의 자식 요소로 추가
     });
 }
@@ -47,5 +47,11 @@ function renderLists() {
 function moveToDone(index) {
     const task = todoList.splice(index, 1)[0];  // 할 일을 "To Do" 리스트에서 제거하고 가져옴
     doneList.push(task);  // "Done" 리스트에 추가
+    renderLists();  // 리스트 업데이트
+}
+
+// 해낸 일에 존재하는 리스트를 삭제하는 함수
+function removeList(index){
+    doneList.splice(index, 1);  // 할 일을 "Done" 리스트에서 제거하고 가져옴
     renderLists();  // 리스트 업데이트
 }

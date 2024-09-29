@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: purple;
+      margin-bottom: 40px;
+      box-sizing: border-box; /* w와 h 각각 100px로 유지 */
+    }
+
+    .box1 {
+      border: 10px solid black;
+    }
+
+    .box2 {
+      outline: 20px solid red; /* outline은 두께가 커지면 박스 크기에 영향 안 주고 바깥으로 두꺼워짐 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">border-box</div>
+  <div class="box box2">content-box</div>
+</body>
+
+</html>

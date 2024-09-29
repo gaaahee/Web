@@ -1,0 +1,83 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ECF0F6;
+  height: 100vh;
+}
+
+.header{
+  display: block;
+  border-bottom: 2px solid lightgray;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header h1{
+  text-align: center;
+}
+
+.input-section{
+  margin : 20px;
+}
+
+#todo-input{ /* 입력창 */
+  border-radius: 5px;
+  width: 800px;
+  height: 40px;
+  font-style: italic;
+}
+
+#todo-input:focus{ /* input 필드에 focus가 이동했을 때 동작*/
+  outline: 1px solid rgb(16, 94, 239);
+}
+
+.todo-sections{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.section{
+  flex: 1;
+  flex-direction: row;
+  justify-content:center;
+  margin : 0px 20px;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none; /* 불릿 포인트 숨기기 */
+  width: 70%;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-between; /* 목록에 적힌 텍스트와 버튼을 양쪽 끝으로 배치 */
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 3px solid lightgray;
+  /*margin-bottom: 20px;*/
+  margin: 0px auto 20px auto;
+  width:100%;
+}
+
+.complete-btn, .remove-btn{
+  background-color: lightgray;
+  border-style: hidden;
+  float:right;
+  cursor: pointer;
+}
+
+.section h4{ /* 해야 할 일, 해낸 일 리스트 제목 영역 */
+  border-bottom: 2px solid lightgray;
+  border-width: 3px;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}

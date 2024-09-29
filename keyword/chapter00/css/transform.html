@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform 예제</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      transition: transform 0.5s;
+    }
+
+    .box1:hover {
+      transform: translate(50px, 100px);
+    }
+
+    .box2{
+      width: 100px;
+      height: 100px;
+      background-color: lightpink;
+      transform: scale(1.5, 0.5);
+    }
+
+    .box3{
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      transform: rotate(80deg);
+    }
+
+    .box4:hover{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      transform: skew(45deg, 20deg);
+    }
+
+    .box5{
+      width: 100px;
+      height: 100px;
+      background-color: lightgrey;
+      transform: matrix(1, 0, 0, 1, 50, 50);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box1">BOX</div>
+  <div class="box2">BOX</div>
+  <div class="box3">BOX</div>
+  <div class="box4">BOX</div>
+  <div class="box5">BOX</div>
+
+</body>
+</html>

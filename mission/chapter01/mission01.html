@@ -8,22 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>UMC Study Plan</h1>
-
+        <div class = "header">
+            <h1>UMC Study Plan</h1>
+        </div>
+        
         <!-- 입력창 -->
         <div class="input-section">
             <input type="text" id="todo-input" placeholder="스터디 계획을 작성해보세요!" onkeypress="addTask(event)">
         </div>
 
-        <!-- 해야할 일, 해낸 일 영역 -->
+        <!-- 해야 할 일, 해낸 일 영역 -->
         <div class="todo-sections">
             <div class="section" id="todo">
-                <h2>해야할 일</h2>
+                <h4>해야 할 일</h4>
                 <ul id="todo-list"></ul>
             </div>
 
             <div class="section" id="done">
-                <h2>해낸 일</h2>
+                <h4>해낸 일</h4>
                 <ul id="done-list"></ul>
             </div>
         </div>
