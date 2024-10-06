@@ -1,0 +1,11 @@
+.todo-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-task {
+  flex: 1;
+  margin: 0;
+}

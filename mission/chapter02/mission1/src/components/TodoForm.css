@@ -1,0 +1,14 @@
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.todo-form input {
+  flex: 1;
+}
+
+.todo-form button {
+  flex-shrink: 0;
+}
