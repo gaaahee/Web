@@ -1,14 +1,17 @@
 .todo-form {
   display: flex;
-  gap: 10px;
+  align-items: center; /* 수직 방향으로 가운데 정렬 */
+  justify-content: center; /* 수평 방향으로 가운데 정렬 */
+  gap: 0; /* 인풋창과 버튼 사이의 간격을 없앱니다 */
   margin-bottom: 20px;
-  align-items: center;
 }
 
 .todo-form input {
-  flex: 1;
+  flex: 1; /* 입력창이 버튼을 제외한 나머지 영역을 차지하도록 설정 */
+  margin: 5px;
 }
 
 .todo-form button {
-  flex-shrink: 0;
+  flex-shrink: 0; /* 버튼 크기가 축소되지 않도록 설정 */
+  margin-left: 5px;
 }

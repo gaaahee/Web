@@ -1,6 +1,6 @@
 .custom-button {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #ccabe0;
   color: white;
   border: none;
   border-radius: 5px;
@@ -13,5 +13,7 @@
 }
 
 .custom-button:hover:not(:disabled) {
-  background-color: #0056b3;
+  /* 마우스를 올려놓은 버튼의 배경색을 변경함
+  단, 버튼이 활성화된 경우에만 적용 */
+  background-color: #ccabe0;
 }

@@ -1,4 +1,4 @@
 .todo-list {
-  max-width: 600px;
+  max-width: 600px; /* 600px 이상 커지지 않도록 제한 */
   margin: 0 auto;
 }

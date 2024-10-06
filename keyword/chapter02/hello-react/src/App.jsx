@@ -55,7 +55,7 @@ function App() {
         <button onClick={() => addTodo()} type = 'submit'>할 일 등록</button>
       </form>
       <div>
-        {todos.map((todo, _) => (
+        {todos.map((todo) => (
           <div key={todo.id} style={{display: 'flex', gap: '20px'}}>
             {/* 수정이 아닐 때 */}
             {editingId !== todo.id && (

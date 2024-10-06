@@ -1,0 +1,38 @@
+.movie-item {
+  border-style: none;
+  padding: 4px;
+  margin: 4px;
+  width: 8.5%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.img-container {
+  position: relative; /* 자식 요소들이 부모 요소를 기준으로 위치하도록 함 */
+  width: 100%;
+  height: auto;
+}
+
+.img-container img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto; /* 이미지의 원래 비율에 맞게 높이가 너비에 따라 자동 조정 */
+  display: block; /* 이미지의 하단 여백 제거 */
+}
+
+.overlay {
+  position: absolute; /* 부모 요소를 기준으로 위치 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.15s ease;
+  background-color: rgba(0, 0, 0, 0.5); /* 배경색을 지정 */
+  border-radius: 5px;
+}
+
+.img-container:hover .overlay {
+  opacity: 1; /* img-container에 hover 되었을 때 overlay가 보이도록 설정 */
+}
