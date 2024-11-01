@@ -27,18 +27,24 @@ export const MovieCard = styled.div`
   background-color: #282828;
   border-radius: 10px;
   overflow: hidden;
-  width: 23%;
+  width: 240px;
+  height: 120px;
   cursor: pointer;
   transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.05);
   }
+
+  &:hover > div {
+    display: block; /* MovieCard에 커서가 올라가면 자식 div (MovieLabel) 화면에 표시 */
+  }
 `;
 
 export const MovieImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; // 이미지가 지정된 영역을 꽉 채우도록 설정
 `;
 
 export const MovieLabel = styled.div`
@@ -49,6 +55,7 @@ export const MovieLabel = styled.div`
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
+  display: none; /* 초기 설정은 항상 화면에 안 보이게 함 */
 `;
 
 export const MovieTitle = styled.h3`

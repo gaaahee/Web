@@ -9,6 +9,7 @@ export const NavbarContainer = styled.nav`
   padding: 10px 20px;
 `;
 
+// YONGCHA 로고
 export const Logo = styled(Link)`
   font-size: 24px;
   font-weight: bold;

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarContainer, Logo, NavLinks, NavButton } from "./Navbar.styled";
+import { NavbarContainer, Logo, NavLinks, NavButton } from "../styled/Navbar.styled";
 
 const Navbar = () => {
   return (

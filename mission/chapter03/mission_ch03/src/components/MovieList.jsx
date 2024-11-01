@@ -1,15 +1,27 @@
-//import React from 'react';
-import MovieItem from './MovieItem';
-import { MovieListContainer } from './MovieList.styled';
+import React from "react";
+import { Link } from "react-router-dom";
+import { MoviesGrid, MovieCard, MovieImage, MovieTitle } from "../styled/Movie.styled";
 
-function MovieList({ movies }) {
+const MovieList = ({ movies }) => {
   return (
-    <MovieListContainer>
+    <MoviesGrid>
       {movies.map((movie) => (
-        <MovieItem key={movie.id} movie={movie} />
+        <Link
+          key={movie.id}
+          to={`/movies/${movie.id}`} // 각 영화의 ID를 포함한 경로로 링크 설정
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <MovieCard>
+            <MovieImage
+              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <MovieTitle>{movie.title}</MovieTitle>
+          </MovieCard>
+        </Link>
       ))}
-    </MovieListContainer>
+    </MoviesGrid>
   );
-}
+};
 
 export default MovieList;
