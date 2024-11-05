@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/navbar.jsx";
 import Sidebar from "../components/Sidebar/sidebar.jsx";
-import {LayoutContainer, MainContent} from "./RootLayout.js";
+import {LayoutContainer, MainContent} from "./root-layout.styled";
 import {Outlet} from "react-router-dom";
 
 // <Outlet/> : 부모 컴포넌트 내에서 자식 컴포넌트가 어디에 렌더링될지 지정

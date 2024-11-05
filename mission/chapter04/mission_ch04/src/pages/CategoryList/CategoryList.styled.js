@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MoviesContainer = styled.div`
+export const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,20 +15,12 @@ export const CategoryTitle = styled.h1`
   font-size: 2rem;
 `;
 
-export const MoviesGrid = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-`;
-
-export const MovieCard = styled.div`
+export const CategoryCard = styled.div`
   background-color: #282828;
   border-radius: 10px;
   overflow: hidden;
-  width: 240px;
-  height: 120px;
+  width: 280px;
+  height: 180px;
   cursor: pointer;
   transition: transform 0.3s ease;
 
@@ -41,13 +33,13 @@ export const MovieCard = styled.div`
   }
 `;
 
-export const MovieImage = styled.img`
+export const CategoryImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover; // 이미지가 지정된 영역을 꽉 채우도록 설정
 `;
 
-export const MovieLabel = styled.div`
+export const CategoryLabel = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -56,18 +48,4 @@ export const MovieLabel = styled.div`
   padding: 5px 10px;
   border-radius: 5px;
   display: none; /* 초기 설정은 항상 화면에 안 보이게 함 */
-`;
-
-export const MovieTitle = styled.h3`
-  padding: 10px;
-  color: #fff;
-  font-size: 1rem;
-  text-align: center;
-`;
-
-export const MovieCategory = styled.p`
-  color: #ddd;
-  font-size: 0.9rem;
-  padding: 0 10px 20px;
-  text-align: center;
 `;

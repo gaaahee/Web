@@ -1,8 +1,7 @@
-// MovieDetail.js
 import React from "react";
 import { useParams } from "react-router-dom";
-import useCustomFetch from "../hooks/useCustomFetch";
-import { MovieDetailContainer, MovieTitle, MovieOverview, MoviePoster } from "../styled/MovieDetail.styled";
+import useCustomFetch from "../../hooks/useCustomFetch";
+import { MovieDetailContainer, MovieTitle, MovieOverview, MoviePoster } from "./MovieDetail";
 
 const MovieDetail = () => {
   const { movieId } = useParams(); // URL에서 movieId를 가져옴

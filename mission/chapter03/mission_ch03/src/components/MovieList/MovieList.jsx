@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MoviesGrid, MovieCard, MovieImage, MovieTitle } from "../styled/Movie.styled";
+import { MoviesGrid, MovieCard, MovieImage, MovieTitle } from "./MovieList";
 
 const MovieList = ({ movies }) => {
   return (
@@ -13,7 +13,7 @@ const MovieList = ({ movies }) => {
         >
           <MovieCard>
             <MovieImage
-              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/w200${movie.poster_path}`}
               alt={movie.title}
             />
             <MovieTitle>{movie.title}</MovieTitle>

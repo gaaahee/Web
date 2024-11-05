@@ -4,9 +4,9 @@ import RootLayout from "./layout/root-layout";
 import HomePage from "./pages/home";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
-import Movies from "./pages/movie";
-import MovieDetail from "./components/MovieDetail";
 import Search from './pages/search';
+import Movies from "./pages/movie";
+import MovieDetail from "./components/MovieDetail/MovieDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,16 +26,16 @@ const router = createBrowserRouter([
             element: <Signup/>
           },
           {
-              path: 'movies',
-              element: <Movies/>
+            path: 'search',
+            element: <Search/>
+          },
+          {
+            path: 'movies',
+            element: <Movies/>
           },
           {
             path: 'movies/:movieId',
             element: <MovieDetail />
-          },
-          {
-            path: 'search',
-            element: <Search/>
           }
       ]
   },
