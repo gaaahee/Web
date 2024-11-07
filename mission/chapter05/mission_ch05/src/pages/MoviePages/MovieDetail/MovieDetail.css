@@ -1,0 +1,19 @@
+.entire_box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.casting{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.cast_list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+h2{
+  color: white;
+}

@@ -6,5 +6,4 @@ export const LayoutContainer = styled.div`
 
 export const MainContent = styled.div`
   flex: 1; /* 사이드바를 제외한 나머지 공간을 차지 */
-  background-color: #000;
 `;

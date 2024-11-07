@@ -12,7 +12,6 @@ const MovieDetail = (props)=>{
     const { data : movie, isCastLoading, isCastError } = 
     useCustomFetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=ko-KR`);
     
-
     if(isDetailLoading || isCastLoading){
         return<div>로딩중 입니다...</div>
     }

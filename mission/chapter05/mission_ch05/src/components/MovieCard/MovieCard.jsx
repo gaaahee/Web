@@ -1,7 +1,7 @@
 import "./movieCard.css"
 
 const MovieCard = (props)=>{
-    const {poster_path, title, release_date} = props;
+    const {poster_path, title, release_date} = props
     return (
         <div className='movie_item'>
           <img className='poster_img' 

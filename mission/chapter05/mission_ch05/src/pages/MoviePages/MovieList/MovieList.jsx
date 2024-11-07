@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useCustomFetch from "../../../hooks/useCustomFetch";
-import {MovieListContainer, StyledLink} from "./MovieList.style";
+import {MovieListContainer} from "./MovieList.style";
 import MovieCard from "../../../components/MovieCard/MovieCard";
 
 const APIurl={
@@ -13,24 +14,23 @@ const APIurl={
 const MovieList = (props) => {
   const { category } = props;
   const { data: movies, isLoading, isError } = useCustomFetch(APIurl[category]);
-
+  //console.log("Fetched URL:", APIurl[category]);
   if(isLoading){
     return <div>로딩중 입니다...</div>;
   }
   if(isError){
     return <div>에러 발생</div>;
   }
-  console.log(movies.results);
+
   return (
     <>
       <MovieListContainer>
-        {movies.results?.map((movie) => (
-          <StyledLink key={movie.id} to={`../movies/${movie.id}`} >
+        {movies.data?.results.map((movie) => (
+          <Link to={`../movies/${movie.id}`} key={movie.id}>
             <MovieCard poster_path={movie.poster_path} 
                         title = {movie.title} 
-                        release_date = {movie.release_date}
-            />
-          </StyledLink>
+                        release_date = {movie.release_date}/>
+          </Link>
         ))}
       </MovieListContainer>
     </>
