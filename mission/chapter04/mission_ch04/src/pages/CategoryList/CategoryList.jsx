@@ -1,7 +1,7 @@
 // 카테고리 목록을 출력하는 페이지
 import React from "react";
 import { Link } from "react-router-dom";
-import { CategoryContainer, CategoryTitle, CategoryCard, CategoryImage } from "./CategoryList.styled";
+import { CategoryContainer, CategoryHeaderName, CategoryTitle, CategoryCard, CategoryImage, CategoryBox } from "./CategoryList.style";
 
 import image1 from '../../assets/sanrio1.png';
 import image2 from '../../assets/sanrio2.png';
@@ -40,16 +40,18 @@ const CategoryList = () => {
   return (
     <>
       <CategoryContainer>
-        {categories.map((category) => ( // 카테고리 목록 순회
-          <Link
-            key={category.id}
-            to={`/movies/${category.endpoint}`}> {/*클릭 시 movies/:category 경로로 이동*/}
-            <CategoryCard>
-              <CategoryImage src={category.imgSrc} alt={category.title} />
-              <CategoryTitle>{category.title}</CategoryTitle>
-            </CategoryCard>
-          </Link>
-        ))}
+        <CategoryHeaderName>카테고리 목록</CategoryHeaderName>
+        <CategoryBox>
+          {categories.map((category) => ( // 카테고리 목록 순회
+            <Link
+              key={category.id} to={`/movies/${category.endpoint}`}> {/*클릭 시 movies/:id 경로로 이동*/}
+              <CategoryCard>
+                <CategoryImage src={category.imgSrc} alt={category.title} />
+                <CategoryTitle>{category.title}</CategoryTitle>
+              </CategoryCard>
+            </Link>
+          ))}
+        </CategoryBox>
       </CategoryContainer>
     </>
   );

@@ -2,40 +2,40 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layout/root-layout";
 import HomePage from "./pages/Default/home";
-import Login from "./pages/Default/login";
-import Signup from "./pages/Default/signup";
-import Search from './pages/Default/search';
-import CategoryList from "./pages/CategoryList/CategoryList";
-import MovieList from "./pages/MovieList/MovieList"; // 영화 목록 페이지
+import LoginPage from "./pages/Default/login";
+import SignupPage from "./pages/Default/signup";
+import SearchPage from './pages/Default/search';
+import CategoryListPage from "./pages/CategoryList/CategoryList";
+import MovieRoute from "./pages/MoviePages/MovieRoute";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
+    element: <RootLayout/>,
     children: [
       { 
         index: true, 
-        element: <HomePage /> 
+        element: <HomePage/> 
       },
       { 
         path: 'login', 
-        element: <Login /> 
+        element: <LoginPage/> 
       },
       { 
         path: 'signup', 
-        element: <Signup /> 
+        element: <SignupPage/> 
       },
       { 
         path: 'search', 
-        element: <Search /> 
+        element: <SearchPage/> 
       },
       { 
         path: 'movies', 
-        element: <CategoryList />
+        element: <CategoryListPage/>
       },
       { 
-        path: 'movies/:movieId', 
-        element: <MovieList /> 
+        path: 'movies/:id', 
+        element: <MovieRoute/> 
       }
     ]
   }

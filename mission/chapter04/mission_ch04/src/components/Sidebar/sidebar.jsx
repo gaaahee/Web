@@ -1,5 +1,5 @@
 import React from "react";
-import { SidebarContainer, SidebarLink } from "./sidebar.styled";
+import { SidebarContainer, SidebarLink } from "./sidebar.style";
 import { IoSearch } from "react-icons/io5";
 import { PiFilmSlateFill } from "react-icons/pi";
 

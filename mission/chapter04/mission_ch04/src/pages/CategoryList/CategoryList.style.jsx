@@ -1,45 +1,55 @@
 import styled from "styled-components";
 
 export const CategoryContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 20px;
-  background-color: #181818;
+  background-color: #000;
   min-height: 100vh;
 `;
 
-export const CategoryTitle = styled.h1`
+export const CategoryHeaderName = styled.div`  
   color: #fff;
-  margin-bottom: 30px;
-  font-size: 2rem;
+  margin: 5px 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+`;
+
+export const CategoryBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justifyContent: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 `;
 
 export const CategoryCard = styled.div`
   background-color: #282828;
   border-radius: 10px;
   overflow: hidden;
-  width: 280px;
+  width: 260px;
   height: 180px;
   cursor: pointer;
+  position: relative; /* 자식 요소 절대 위치 설정에 필요 */
   transition: transform 0.3s ease;
+  margin: 0 10px;
 
   &:hover {
     transform: scale(1.05);
   }
 
   &:hover > div {
-    display: block; /* MovieCard에 커서가 올라가면 자식 div (MovieLabel) 화면에 표시 */
+    display: block; /* 마우스가 올라가면 Label 표시 */
   }
 `;
 
 export const CategoryImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover; // 이미지가 지정된 영역을 꽉 채우도록 설정
+  object-fit: cover;
 `;
 
-export const CategoryLabel = styled.div`
+export const CategoryTitle = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;

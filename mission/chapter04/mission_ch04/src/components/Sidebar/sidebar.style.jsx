@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const SidebarContainer = styled.div`
-  position: fixed;
+  position: relative;
   left: 0;
-  top: 60px;
   width: 15%;
-  height: calc(100% - 60px); /* Navbar 높이를 제외한 남은 공간 */
+  min-height: 100vh; /* Navbar 높이를 제외한 남은 공간 */
   background-color: #1b1b1b;
   display: flex;
   flex-direction: column;

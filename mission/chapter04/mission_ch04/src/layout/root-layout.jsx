@@ -15,9 +15,9 @@ const RootLayout = () => {
             <Navbar/>
             <LayoutContainer>
                 <Sidebar/>
-            <MainContent>
-                <Outlet/>
-            </MainContent>
+                <MainContent>
+                    <Outlet/>
+                </MainContent>
             </LayoutContainer>
         </>
     );

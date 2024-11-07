@@ -3,10 +3,15 @@ import MovieDetailCard from "../../../components/MovieDetailCard/MovieDetailCard
 import useCustomFetch from "../../../hooks/useCustomFetch";
 import './MovieDetail.css'
 
-const MovieDetailPage = (props)=>{
+const MovieDetail = (props)=>{
     const {movieId} = props;
-    const { data : detail, isDetailLoading, isDetailError} = useCustomFetch(`/movie/${movieId}?language=ko-KR'`);
-    const {data : movie, isCastLoading, isCastError} = useCustomFetch(`/movie/${movieId}/credits?language=ko-KR`);
+    
+    const { data : detail, isDetailLoading, isDetailError} = 
+    useCustomFetch(`https://api.themoviedb.org/3/movie/${movieId}?language=ko-KR`);
+    
+    const { data : movie, isCastLoading, isCastError } = 
+    useCustomFetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=ko-KR`);
+    
     if(isDetailLoading || isCastLoading){
         return<div>로딩중 입니다...</div>
     }
@@ -21,7 +26,7 @@ const MovieDetailPage = (props)=>{
                     <h2>감독/출연</h2>
                     <div className="cast_list">
                         {movie.data?.cast.map((cast)=>(
-                            <CastCard key={cast.id} cast={cast}/>
+                            <CastCard key = {cast.id} cast = {cast}/>
                         ))}
                     </div> 
                 </div>
@@ -30,4 +35,4 @@ const MovieDetailPage = (props)=>{
     )
 }
 
-export default MovieDetailPage;
+export default MovieDetail;
