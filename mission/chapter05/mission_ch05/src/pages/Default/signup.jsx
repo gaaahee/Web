@@ -1,11 +1,47 @@
-import react from 'react';
+import React from 'react';
+import {useForm} from 'react-hook-form'
+import * as yup from 'yup'
+import {yupResolver} from '@hookform/resolvers/yup'
+import styled from 'styled-components';
 
 const Signup = () => {
-  return (
-    <div>
-      <h1>회원가입 페이지</h1>
-    </div>
-  );
+    const schema = yup.object().shape({
+      email: yup.string().email().required(
+        '이메일을 반드시 입력해주세요.'
+      ),
+      password: yup.string().min(
+        8, 
+        '비밀번호는 8자 이상이어야 합니다.'
+      ).max(16, '비밀번호는 16자 이하여야 합니다.').required(),
+    });
+
+    const {register, handleSubmit, formState: {errors}} = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    const onSubmit = (data) => {
+        console.log('폼 데이터 제출')
+        console.log(data);
+    }
+
+    return (
+      <>
+        <h1> 회원가입 </h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+              <input type={'email'} placeholder='' {...register("email")}/>
+              <p style={{color: 'red'}}>{errors.email?.message}</p>
+              <input type={'password'} {...register("password")}/>
+              <p style={{color: 'red'}}>{errors.password?.message}</p>
+              <input type={'submit'}/>
+        </form>
+      </>
+    );
 };
 
+const inputEmail = styled.input`
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+`;
 export default Signup;
