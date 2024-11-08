@@ -20,7 +20,7 @@ const MovieList = (props) => {
   if(isError){
     return <div>에러 발생</div>;
   }
-  console.log(movies.results);
+  //console.log(movies.results);
   return (
     <>
       <MovieListContainer>

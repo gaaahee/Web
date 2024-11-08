@@ -1,7 +1,7 @@
 import React from 'react';
 import './CastCard.css';
 
-const CastCard = (props) =>{
+const CastCard = (props) =>{ // props로 출연 배우 정보를 받아옴
   const {cast} = props;
   return(
       <>
