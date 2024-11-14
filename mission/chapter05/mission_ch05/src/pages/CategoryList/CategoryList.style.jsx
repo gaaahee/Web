@@ -17,7 +17,7 @@ export const CategoryHeaderName = styled.div`
 export const CategoryBox = styled.div`
   display: flex;
   flex-direction: row;
-  justifyContent: center;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
